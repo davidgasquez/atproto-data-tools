@@ -1,2 +1,3 @@
-# databs-social-graph
-🦋 Scripts to get the social graph of the #databs community
+# Bluesky `#databs` Social Graph
+
+Visualizing the social graph of the `#databs` community on Bluesky.
