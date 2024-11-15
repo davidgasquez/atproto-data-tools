@@ -1,7 +1,12 @@
+# /// script
+# dependencies = [
+#   "atproto",
+# ]
+# ///
+
 import os
 import time
 import argparse
-from tqdm import tqdm
 from atproto import Client
 
 
