@@ -20,6 +20,7 @@ def get_all_follows(client, author):
         return follows
     except Exception as e:
         print(f"Error getting follows for {author}: {str(e)}")
+        print(f"Exception details: {e}")
         return []
 
 
@@ -75,12 +76,18 @@ def export_social_graph(hashtag, username=None, password=None, output_file="edge
         )
 
         # Process each author
-        for source in tqdm(unique_authors):
+        for source in unique_authors:
             try:
+                print(f"Processing author: {source}")
+
                 # Get author profile
-                source_actor = client.app.bsky.actor.get_profile(
-                    params={"actor": source}
-                )
+                try:
+                    source_actor = client.app.bsky.actor.get_profile(
+                        params={"actor": source}
+                    )
+                except Exception as e:
+                    print(f"Error fetching profile for {source}: {str(e)}")
+                    continue
 
                 # Get all follows
                 author_follows = get_all_follows(client, source)
