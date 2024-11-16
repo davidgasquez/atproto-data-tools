@@ -14,7 +14,7 @@ uvx --from 'git+https://github.com/davidgasquez/atproto-data-tools' \
 
 ## 🛠️ Commands
 
-- `adt-socialgraph`: Builds an edge list (source, target) of follows from profiles found in a Bluesky hashtag search.
+- `adt-social-graph`: Builds an edge list (source, target) of follows from profiles found in a Bluesky hashtag search.
 - `adt-export-followers`: Exports followers of a given Bluesky user.
 - `adt-export-plc`: Exports all plc.directory records.
 

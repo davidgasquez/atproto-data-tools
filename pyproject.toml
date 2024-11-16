@@ -8,7 +8,7 @@ requires-python = ">=3.12"
 dependencies = ["atproto>=0.0.55"]
 
 [project.scripts]
-adt-socialgraph = "atproto_data_tools.socialgraph:main"
+adt-social-graph = "atproto_data_tools.social_graph:main"
 adt-export-plc = "atproto_data_tools.export_plc:main"
 adt-export-followers = "atproto_data_tools.export_followers:main"
 
