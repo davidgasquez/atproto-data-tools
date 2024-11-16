@@ -1,10 +1,17 @@
 [project]
-name = "databs-social-graph"
+name = "atproto-data-tools"
 version = "0.1.0"
-description = "Add your description here"
+description = "Small scripts and tools to do data stuff with the AT Protocol."
 readme = "README.md"
+authors = [{ name = "David Gasquez", email = "davidgasquez@gmail.com" }]
 requires-python = ">=3.12"
 dependencies = ["atproto>=0.0.55"]
 
-[dependency-groups]
-dev = ["ipykernel>=6.29.5", "tqdm>=4.67.0"]
+[project.scripts]
+adt-socialgraph = "atproto_data_tools.socialgraph:main"
+adt-export-plc = "atproto_data_tools.export_plc:main"
+adt-export-followers = "atproto_data_tools.export_followers:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
