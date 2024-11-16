@@ -7,7 +7,9 @@ Small scripts and tools to do data stuff with the AT Protocol.
 You can either install this package (`pip install git+https://github.com/davidgasquez/atproto-data-tools`) or run the commands directly with `uvx`.
 
 ```bash
-uvx --from 'git+https://github.com/davidgasquez/atproto-data-tools' adt-export-followers username.com --username $BSKY_USERNAME --password $BSKY_PASSWORD
+uvx --from 'git+https://github.com/davidgasquez/atproto-data-tools' \
+    adt-export-followers yourawesomeusername.com \
+    --username $BSKY_USERNAME --password $BSKY_PASSWORD
 ```
 
 ## 🛠️ Commands
