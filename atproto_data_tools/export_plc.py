@@ -9,7 +9,12 @@ def export_plc_data(output_file):
     cursor = None
 
     while True:
-        response = client.get(f"https://plc.directory/export?count=1000&after={cursor}")
+        url = "https://plc.directory/export?count=1000"
+
+        if cursor:
+            url += f"&after={cursor}"
+
+        response = client.get(url)
 
         if response.status_code == 429:
             print("Rate limit hit. Retrying after 60 seconds.")
