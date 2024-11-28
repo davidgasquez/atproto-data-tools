@@ -5,6 +5,8 @@ from atproto_client.models import utils
 
 
 def get_all_followers(client, author):
+    """Get all followers for a given author"""
+
     cursor = None
     followers = []
     try:

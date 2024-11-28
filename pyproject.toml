@@ -5,7 +5,10 @@ description = "Small scripts and tools to do data stuff with the AT Protocol."
 readme = "README.md"
 authors = [{ name = "David Gasquez", email = "davidgasquez@gmail.com" }]
 requires-python = ">=3.12"
-dependencies = ["atproto>=0.0.55"]
+dependencies = [
+    "atproto>=0.0.55",
+    "cbor2>=5.6.5",
+]
 
 [project.scripts]
 adt-social-graph = "atproto_data_tools.social_graph:main"
